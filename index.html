@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookshelf Apps | Sekar</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head>
+<body>
+    <header>
+        <nav class="head_bar">
+            <h1 class="head_bar__title">Bookshelf Apps</h1>
+            <div class="search_section">
+                <input id="searchBookTitle" type="text" onkeyup="searchBook()" placeholder="Enter the book title..">
+                <button id="searchSubmit" type="button">Search</button>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="input_section card">
+            <h2>Input New Book</h2>
+            <form id="inputBook">
+                <div class="input">
+                    <label for="inputBookTitle">Title</label>
+                    <input id="inputBookTitle" type="text" required>
+                </div>
+                <div class="input">
+                    <label for="inputBookAuthor">Author</label>
+                    <input id="inputBookAuthor" type="text" required>
+                </div>
+                <div class="input">
+                    <label for="inputBookYear">Year</label>
+                    <input id="inputBookYear" type="number" required>
+                </div>
+                <div class="input_inline">
+                    <input id="inputBookIsComplete" type="checkbox">
+                    <label for="inputBookIsComplete">Complete Reading</label>
+                </div>
+                <button id="bookSubmit" type="submit">Put Into <span>Incomplete Reading</span> Shelf</button>
+            </form>
+        </section>
+        <section class="book_shelf card">
+            <h2>Incomplete Reading</h2>
+            <div id="incompleteBookshelfList" class="book_list"></div>
+        </section>
+        <section class="book_shelf card">
+            <h2>Complete Reading</h2>
+            <div id="completeBookshelfList" class="book_list"></div>
+        </section>
+    </main>
+    <footer>
+        <p>Sekar Madu Kusumawardani &copy; 2021</p>
+    </footer>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/dom.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
